@@ -6,8 +6,8 @@ need pskill psexec
 
 :L2
 cd c:\
-certutil.exe -urlcache -split -f  https://github.com/wertynolly/box1/blob/main/bin/pslist c:\pslist.exe
-certutil.exe -urlcache -split -f  https://github.com/wertynolly/box1/blob/main/bin/pskill c:\pskill.exe
+curl -k -o c:\pslist.exe https://github.com/wertynolly/box1/blob/main/bin/pslist
+curl -k -o c:\pskill.exe https://github.com/wertynolly/box1/blob/main/bin/pskill
 
 pslist -accepteula > c:/ps.txt
 
@@ -51,6 +51,9 @@ sc stop MicrosotMaims
 pskill -accepteula hkcmd.exe
 pskill -accepteula igfxtray.exe
 pskill -accepteula igfxpers.exe
+pskill -accepteula 
+pskill -accepteula 
+pskill -accepteula 
 pskill -accepteula audiodg.exe
 
 ren C:\CCBootClient\ThirdParty\TightVNC\tvnserver.exe tvnserver.exe-
@@ -72,25 +75,22 @@ del /f /q /A:H C:\Windows\Fonts\Mysql\mance.exe
 
 DEL /F /Q /A:H c:\Windows\Fonts\conhost.exe
 
-certutil.exe -urlcache -split -f https://live.sysinternals.com/procexp.exe c:\procexp.exe
+curl -k -o c:\procexp.exe https://live.sysinternals.com/procexp.exe c:\procexp.exe
 start c:\procexp.exe
 
-certutil.exe -urlcache -split -f https://github.com/wertynolly/box1/blob/main/unzip.exe c:\unzip.exe
+curl -k -o https://github.com/wertynolly/box1/blob/main/unzip.exe c:\unzip.exe
 
-certutil.exe -urlcache -split -f https://github.com/billziss-gh/winfsp/releases/download/v1.9/winfsp-1.9.21096.msi c:\0.msi
+curl -k -o https://github.com/billziss-gh/winfsp/releases/download/v1.9/winfsp-1.9.21096.msi c:\0.msi
 c:\0.msi
 del c:\0.msi
 
-certutil.exe -urlcache -split -f http://7-zip.org/a/7z1604-x64.exe 0.exe
+curl -k -o http://7-zip.org/a/7z1604-x64.exe 0.exe
 0.exe
 del 0.exe
 
-certutil.exe -urlcache -split -f https://download.geany.org/geany-1.37.1_setup.exe 0.exe
+curl -k -o https://download.geany.org/geany-1.37.1_setup.exe 0.exe
 0.exe
 del 0.exe
 
-certutil.exe -urlcache -split -f http://7-zip.org/a/7z1604-x64.exe c:\7zip.exe
+curl -k -o http://7-zip.org/a/7z1604-x64.exe c:\7zip.exe
 c:\7zip.exe
-
-
-
