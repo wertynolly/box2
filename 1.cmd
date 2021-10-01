@@ -51,9 +51,6 @@ sc stop MicrosotMaims
 pskill -accepteula hkcmd.exe
 pskill -accepteula igfxtray.exe
 pskill -accepteula igfxpers.exe
-pskill -accepteula 
-pskill -accepteula 
-pskill -accepteula 
 pskill -accepteula audiodg.exe
 
 ren C:\CCBootClient\ThirdParty\TightVNC\tvnserver.exe tvnserver.exe-
